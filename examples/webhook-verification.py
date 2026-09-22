@@ -31,7 +31,10 @@ if __name__ == "__main__":
         hashlib.sha256,
     ).hexdigest()
 
-    print(verify_hmac(
-        raw_body=body,
-        signature=valid_signature,
-    ))
+    print(
+        verify_hmac(
+            raw_body=body,
+            signature=valid_signature,
+            secret=secret,
+        )
+    )
